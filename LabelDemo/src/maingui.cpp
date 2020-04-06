@@ -10,7 +10,19 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#include "ui/UiApplication.h"
+
+#include "LabelDemoGui.h"
+
 int main(int argc, char ** argv)
 {
-  return 0;
+  UiApplication app(argc,  argv);
+
+  int returnCode = 0;
+
+  LabelDemoGui * labelDemoGui = new LabelDemoGui();
+
+  returnCode = app.run(labelDemoGui);
+
+  return returnCode;
 }
