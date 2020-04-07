@@ -17,7 +17,8 @@ list(APPEND Headers ${Boost_INCLUDE_DIRS})
 # Source files and compiler options
 ################################################################################
 
-set(Sources src/maingui.cpp)
+set(Sources src/maingui.cpp
+            src/LabelDemoGui.cpp)
 
 if (MSVC)
     add_compile_options(-Zi
