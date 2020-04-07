@@ -13,6 +13,8 @@
 #ifndef LABELDEMOGUI_H_
 #define LABELDEMOGUI_H_
 
+#include <memory>
+
 #include "ui/Window.h"
 
 class LabelDemoGui : public Window
@@ -28,5 +30,11 @@ class LabelDemoGui : public Window
     virtual void create();
 
     virtual void postCreate();
+
+  private:
+
+    class LabelDemoGuiPrivate;
+
+    std::auto_ptr<LabelDemoGuiPrivate> d;
 };
 #endif /* LABELDEMOGUI_H_ */
