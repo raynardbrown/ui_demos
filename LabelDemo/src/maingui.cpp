@@ -22,6 +22,8 @@ int main(int argc, char ** argv)
 
   LabelDemoGui * labelDemoGui = new LabelDemoGui();
 
+  labelDemoGui->showWindow();
+
   returnCode = app.run(labelDemoGui);
 
   return returnCode;
