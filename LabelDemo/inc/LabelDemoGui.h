@@ -25,6 +25,8 @@ class LabelDemoGui : public Window
 
     virtual ~LabelDemoGui();
 
+    void onClose();
+
   protected:
 
     virtual void create();
