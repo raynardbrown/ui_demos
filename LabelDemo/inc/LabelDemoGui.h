@@ -27,6 +27,8 @@ class LabelDemoGui : public Window
 
     void onClose();
 
+    void onLabelClick(UiComponent * uiComponent);
+
   protected:
 
     virtual void create();
