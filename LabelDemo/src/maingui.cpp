@@ -18,13 +18,13 @@ int main(int argc, char ** argv)
 {
   UiApplication app(argc,  argv);
 
-  int returnCode = 0;
+  int exitCode = 0;
 
   LabelDemoGui * labelDemoGui = new LabelDemoGui();
 
   labelDemoGui->showWindow();
 
-  returnCode = app.run(labelDemoGui);
+  exitCode = app.run(labelDemoGui);
 
-  return returnCode;
+  return exitCode;
 }
