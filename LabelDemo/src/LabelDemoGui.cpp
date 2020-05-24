@@ -335,25 +335,31 @@ void LabelDemoGui::postCreate()
 
   ::initUiComponentConstraints(&uiComponentConstraints);
 
-  d->mainRowLayout->addUiComponent(d->labelLight, 0, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelRegular, 0, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelItalic, 0, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelBold, 0, &uiComponentConstraints);
+  RowLayout::Row * currentRow = d->mainRowLayout->addRow();
+
+  currentRow->addUiComponent(d->labelLight, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelRegular, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelItalic, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelBold, &uiComponentConstraints);
 
   // TODO: Add bottom/top row orientation to the RowLayout class
-  d->mainRowLayout->addUiComponent(d->labelDefaultPointSize, 1, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->label_12PointSize, 1, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->label_18PointSize, 1, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->label_24PointSize, 1, &uiComponentConstraints);
+  currentRow = d->mainRowLayout->addRow();
+  currentRow->addUiComponent(d->labelDefaultPointSize, &uiComponentConstraints);
+  currentRow->addUiComponent(d->label_12PointSize, &uiComponentConstraints);
+  currentRow->addUiComponent(d->label_18PointSize, &uiComponentConstraints);
+  currentRow->addUiComponent(d->label_24PointSize, &uiComponentConstraints);
 
-  d->mainRowLayout->addUiComponent(d->labelEnabled, 2, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelDisabled, 2, &uiComponentConstraints);
+  currentRow = d->mainRowLayout->addRow();
+  currentRow->addUiComponent(d->labelEnabled, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelDisabled, &uiComponentConstraints);
 
-  d->mainRowLayout->addUiComponent(d->labelOpenAmpersandClose, 3, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelOpenFileAccelerator, 3, &uiComponentConstraints);
+  currentRow = d->mainRowLayout->addRow();
+  currentRow->addUiComponent(d->labelOpenAmpersandClose, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelOpenFileAccelerator, &uiComponentConstraints);
 
-  d->mainRowLayout->addUiComponent(d->labelColorOne, 4, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelColorTwo, 4, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelColorThree, 4, &uiComponentConstraints);
-  d->mainRowLayout->addUiComponent(d->labelColorFour, 4, &uiComponentConstraints);
+  currentRow = d->mainRowLayout->addRow();
+  currentRow->addUiComponent(d->labelColorOne, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelColorTwo, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelColorThree, &uiComponentConstraints);
+  currentRow->addUiComponent(d->labelColorFour, &uiComponentConstraints);
 }
